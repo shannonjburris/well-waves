@@ -1,15 +1,9 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { Profile, Sounds } = require('../models');
+const { User, Sounds } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    profiles: async () => {
-      return Profile.find();
-    },
-    profile: async (parent, { profileId }) => {
-      return Profile.findOne({ _id: profileId });
-    },
     sounds: async () => {
       return Sounds.find();
     },
@@ -19,31 +13,31 @@ const resolvers = {
   },
 
   Mutation: {
-    addProfile: async (parent, { name, email, password }) => {
-      const profile = await Profile.create({ name, email, password });
-      const token = signToken(profile);
+    addUser: async (parent, { name, email, password }) => {
+      const user = await User.create({ name, email, password });
+      const token = signToken(user);
 
-      return { token, profile };
+      return { token, user };
     },
     login: async (parent, { email, password }) => {
-      const profile = await Profile.findOne({ email });
+      const user = await User.findOne({ email });
 
-      if (!profile) {
-        throw new AuthenticationError('No profile with this email found!');
+      if (!user) {
+        throw new AuthenticationError('No user with this email found!');
       }
 
-      const correctPw = await profile.isCorrectPassword(password);
+      const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
         throw new AuthenticationError('Incorrect password!');
       }
 
-      const token = signToken(profile);
-      return { token, profile };
+      const token = signToken(user);
+      return { token, user };
     },
-    addSound: async (parent, { profileId, sounds }) => {
-      return Profile.findOneAndUpdate(
-        { _id: profileId },
+    addSound: async (parent, { userId, sounds }) => {
+      return User.findOneAndUpdate(
+        { _id: userId },
         {
           $addToSet: { sounds: sounds },
         },
@@ -53,12 +47,9 @@ const resolvers = {
         }
       );
     },
-    removeProfile: async (parent, { profileId }) => {
-      return Profile.findOneAndDelete({ _id: profileId });
-    },
-    removeSound: async (parent, { profileId, sounds }) => {
-      return Profile.findOneAndUpdate(
-        { _id: profileId },
+    removeSound: async (parent, { userId, sounds }) => {
+      return User.findOneAndUpdate(
+        { _id: userId },
         { $pull: { sounds: sounds } },
         { new: true }
       );
