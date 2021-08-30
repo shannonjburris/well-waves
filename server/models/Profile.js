@@ -19,6 +19,12 @@ const profileSchema = new Schema({
     required: true,
     minlength: 5,
   },
+  sounds: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Sound'
+    }
+  ]
 });
 
 // set up pre-save middleware to create password
