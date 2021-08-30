@@ -3,8 +3,9 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
   type Profile {
     _id: ID!
-    name: String
-    email: String
+    name: String!
+    email: String!
+    password: String!
     sounds: [Sounds]
   }
 
@@ -23,6 +24,9 @@ const typeDefs = gql`
 
   type Mutation {
     addSound(name: String!, length: Number!, tag: String!): Sound
+    removeSound(name: String!, length: Number!, tag: String!): Sound
+    addProfile(name: String!, email: String!, password: String!): Profile
+    removeProfile(name: String!, email: String!, password: String!): Profile
   }
 `;
 
