@@ -17,9 +17,16 @@ const typeDefs = gql`
     profiles: Profile
   }
 
+  type Auth {
+    token: ID!
+    profiles: Profile
+  }
+
   type Query {
     profiles: [Profile]
     sounds: [Sound]
+    profiles(profileId: ID!): Profile
+    sounds(soundId: ID!): Sound
   }
 
   type Mutation {
@@ -27,6 +34,7 @@ const typeDefs = gql`
     removeSound(name: String!, length: Number!, tag: String!): Sound
     addProfile(name: String!, email: String!, password: String!): Profile
     removeProfile(name: String!, email: String!, password: String!): Profile
+    login(email: String!, password: String!): Auth
   }
 `;
 

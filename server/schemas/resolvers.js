@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { Profile } = require('../models');
+const { Profile, Sounds } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -7,9 +7,14 @@ const resolvers = {
     profiles: async () => {
       return Profile.find();
     },
-
     profile: async (parent, { profileId }) => {
       return Profile.findOne({ _id: profileId });
+    },
+    sounds: async () => {
+      return Sounds.find();
+    },
+    sound: async (parent, { soundsId }) => {
+      return Sounds.findOne({ _id: soundsId });
     },
   },
 
@@ -36,12 +41,11 @@ const resolvers = {
       const token = signToken(profile);
       return { token, profile };
     },
-
-    addSound: async (parent, { profileId, sound }) => {
+    addSound: async (parent, { profileId, sounds }) => {
       return Profile.findOneAndUpdate(
         { _id: profileId },
         {
-          $addToSet: { sounds: sound },
+          $addToSet: { sounds: sounds },
         },
         {
           new: true,
@@ -52,10 +56,10 @@ const resolvers = {
     removeProfile: async (parent, { profileId }) => {
       return Profile.findOneAndDelete({ _id: profileId });
     },
-    removeSound: async (parent, { profileId, sound }) => {
+    removeSound: async (parent, { profileId, sounds }) => {
       return Profile.findOneAndUpdate(
         { _id: profileId },
-        { $pull: { sounds: sound } },
+        { $pull: { sounds: sounds } },
         { new: true }
       );
     },
