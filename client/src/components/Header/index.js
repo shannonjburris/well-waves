@@ -29,6 +29,7 @@ const Header = (props) => {
               <Link to="/dailyexercises">Daily Exercises</Link>
               <Link to="/create">Create</Link>
               <Link to="/favorites">Favorites</Link>
+              <Link to="/login">Login</Link>
             </NavItem>
             <NavItem>
               <Link href="https://github.com/reactstrap/reactstrap">GitHub</Link>
