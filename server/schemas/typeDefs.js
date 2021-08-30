@@ -22,7 +22,7 @@ const typeDefs = gql`
   }
 
   type Mutation {
-
+    addSound(name: String!, length: Number!, tag: String!): Sound
   }
 `;
 
