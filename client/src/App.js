@@ -14,11 +14,11 @@ function App() {
     <div>
       <Header />
       <Switch>
-        <Route exact path="/" page={Home} />
-        <Route path="/explore" page={Explore} />
-        <Route path="/dailyexercises" page={DailyExercises} />
-        <Route path="/create" page={Create} /> 
-        <Route path="/favorites" page={Favorites} />
+        <Route exact path="/" component={Home} />
+        <Route path="/explore" component={Explore} />
+        <Route path="/dailyexercises" component={DailyExercises} />
+        <Route path="/create" component={Create} /> 
+        <Route path="/favorites" component={Favorites} />
       </Switch>
       <Footer />
     </div>
