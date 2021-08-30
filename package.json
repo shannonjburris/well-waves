@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/RLAQUEA/final-project#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "concurrently": "^6.2.1"
   }
 }
