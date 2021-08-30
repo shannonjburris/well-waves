@@ -1,3 +1,4 @@
+
 import { gql } from '@apollo/client';
 
 export const QUERY_SOUNDS = gql`
@@ -23,3 +24,4 @@ export const QUERY_SINGLE_SOUNDS = gql`
         }
     }
 `;
+

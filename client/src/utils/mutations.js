@@ -1,3 +1,4 @@
+
 import { gql } from '@apollo/client';
 
 export const LOGIN_USER = gql`
@@ -36,3 +37,4 @@ mutation addSound($name: String!, $length: Number!, $tags: String!, $link: Strin
     }
   }
 `;
+

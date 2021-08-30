@@ -1,6 +1,6 @@
 import React from 'react';
 
-function DailyExercises() {
+function Favorite() {
     return (
       <div>
           <h1>hello</h1>
@@ -8,5 +8,5 @@ function DailyExercises() {
     );
   }
   
-  export default DailyExercises;
+  export default Favorite;
   
