@@ -21,6 +21,10 @@ const SoundsSchema = new Schema({
     type: Number,
     unique: true,
     required: true
+  },
+  profiles: {
+    type: Schema.Types.ObjectId,
+    ref: 'Profile'
   }
 });
 
