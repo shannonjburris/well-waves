@@ -6,7 +6,7 @@ import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 
 const Login = (props) => {
-  const [formState, setFormState] = useState({ name: '', email: '', password: '' });
+  const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
   // update state based on form input changes
@@ -35,15 +35,14 @@ const Login = (props) => {
 
     // clear form values
     setFormState({
-      name: '',
       email: '',
       password: '',
     });
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
+    <main className="flex-row justify-center mb-5 mt-5">
+      <div className="col-6 col-lg-10">
         <div className="card">
           <h4 className="card-header bg-dark text-light p-2">Login</h4>
           <div className="card-body">
