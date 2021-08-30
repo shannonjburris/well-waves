@@ -26,10 +26,10 @@ const Header = (props) => {
           <Nav className="mr-auto" navbar>
             <NavItem>
               <Link to="/">Home</Link>
-              <Link to="/">Explore</Link>
-              <Link to="/">Daily Exercises</Link>
-              <Link to="/">Create</Link>
-              <Link to="/">Favorites</Link>
+              <Link to="/explore">Explore</Link>
+              <Link to="/dailyexercises">Daily Exercises</Link>
+              <Link to="/create">Create</Link>
+              <Link to="/favorites">Favorites</Link>
             </NavItem>
             <NavItem>
               <Link href="https://github.com/reactstrap/reactstrap">GitHub</Link>
