@@ -1,0 +1,84 @@
+:root {
+    --darkblue: #111426;
+    --grayblue: #455359;
+    --tan: #A6A085;
+    --peach: #BF7D65;
+    --coral: #F25E5E;
+}
+
+.nav-bar {
+    background-color: #455359;
+}
+
+.nav-brand {
+    color: var(--tan) !important;
+    font-size: 1.75rem !important;
+}
+
+.nav-brand:hover {
+    color: var(--darkblue) !important;
+}
+
+.nav-link-group {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    margin-right: 20px;
+    text-decoration: none !important;
+    color: var(--tan);
+    font-size: 1.1rem !important;
+}
+
+.nav-links:hover {
+    background-color: var(--coral);
+    color: var(--darkblue);
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+}
+
+.login-link {
+    background-color: var(--coral);
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none !important;
+    color: #ffffff;
+    font-size: 1.1rem !important;
+}
+
+.logout-link {
+    background-color: green;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none !important;
+    color: #ffffff;
+    font-size: 1.1rem !important;
+}
+
+.login-link:hover, .logout-link:hover {
+    color: var(--darkblue);
+}
+
+@media only screen and (max-width: 845px) {
+    .login-link, .logout-link {
+        text-align: center;
+        margin-top: 8px;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .nav-link-group {
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-items {
+        margin: auto;
+    }
+
+    .nav-links {
+        font-size: 1rem !important;
+    }
+  }
