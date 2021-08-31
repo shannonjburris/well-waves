@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import {
   Collapse,
   Navbar,
@@ -8,13 +7,19 @@ import {
   Nav,
   NavItem,
 } from 'reactstrap';
-
 import { Link } from 'react-router-dom';
+
+import Auth from '../../utils/auth';
 
 const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+
+  const logout = (event) => {
+    event.preventDefault();
+    Auth.logout();
+  };
 
   return (
     <div>
@@ -29,7 +34,13 @@ const Header = (props) => {
               <Link to="/dailyexercises">Daily Exercises</Link>
               <Link to="/create">Create</Link>
               <Link to="/favorites">Favorites</Link>
+              {Auth.loggedIn() ? (
+            <>
+              <Link onClick={logout}>Logout</Link>
+            </>
+          ) : (
               <Link to="/login">Login</Link>
+          )}
             </NavItem>
             <NavItem>
               <Link href="https://github.com/reactstrap/reactstrap">GitHub</Link>
