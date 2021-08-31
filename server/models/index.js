@@ -1,5 +1,5 @@
 module.exports = {
     Sounds: require("./Sounds"),
-    Profile: require("./Profile")
+    User: require("./User")
   };
   
