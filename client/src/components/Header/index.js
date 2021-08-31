@@ -11,6 +11,8 @@ import { Link } from 'react-router-dom';
 
 import Auth from '../../utils/auth';
 
+import "./index.css"
+
 const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,27 +25,26 @@ const Header = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+      <Navbar light expand="md" className="px-3 py-4 nav-bar">
+        <NavbarBrand href="/" className="nav-brand">Frequencies</NavbarBrand>
         <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <NavItem>
-              <Link to="/">Home</Link>
-              <Link to="/explore">Explore</Link>
-              <Link to="/dailyexercises">Daily Exercises</Link>
-              <Link to="/create">Create</Link>
-              <Link to="/favorites">Favorites</Link>
-              {Auth.loggedIn() ? (
-            <>
-              <Link onClick={logout}>Logout</Link>
-            </>
-          ) : (
-              <Link to="/login">Login</Link>
-          )}
+        <Collapse isOpen={isOpen} navbar  className="nav-link-group">
+          <Nav navbar>
+            <NavItem className="nav-items">
+              <Link to="/" className="nav-links">Home</Link>
+              <Link to="/explore" className="nav-links">Explore</Link>
+              <Link to="/dailyexercises" className="nav-links">Daily Exercises</Link>
+              <Link to="/create" className="nav-links">Create</Link>
+              <Link to="/favorites" className="nav-links">Favorites</Link>
             </NavItem>
             <NavItem>
-              <Link href="https://github.com/reactstrap/reactstrap">GitHub</Link>
+              {Auth.loggedIn() ? (
+            <>
+              <Link onClick={logout} className="logout-link">Logout</Link>
+            </>
+          ) : (
+              <Link to="/login" className="login-link">Login</Link>
+          )}
             </NavItem>
           </Nav>
         </Collapse>
