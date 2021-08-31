@@ -3,21 +3,13 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className="w-100 mt-auto bg-secondary p-4">
-      <div className="container text-center mb-5">
-        <h4>
-          Made with{' '}
-          <span
-            className="emoji"
-            role="img"
-            aria-label="heart"
-            aria-hidden="false"
-          >
-            ❤️
-          </span>{' '}
-        </h4>
-      </div>
-    </footer>
-  );
+     <div class="container">
+                <div class="links">
+                <a href="https://github.com/RLAQUEA/final-project" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            </footer>
+  )
 };
 
 export default Footer;
