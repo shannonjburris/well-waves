@@ -34,7 +34,7 @@ const typeDefs = gql`
     addSound(name: String!, tag: String!): Sound
     removeSound(name: String!, tag: String!): Sound
 
-    addUser(username: String!, email: String!, password: String!): Auth
+    addUser(email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
   }
 `;

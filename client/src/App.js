@@ -13,7 +13,8 @@ import DailyExercises from "./pages/DailyExercises";
 import Explore from "./pages/Explore";
 import Home from "./pages/Home";
 import Favorites from "./pages/Favorites";
-import Login from "./pages/Login"
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -50,6 +51,7 @@ function App() {
         <Route path="/create" component={Create} /> 
         <Route path="/favorites" component={Favorites} />
         <Route path="/login" component={Login} />
+        <Route path="/signup" component={Signup} />
       </Switch>
       <Footer />
     </div>
