@@ -1,5 +1,4 @@
 import React from 'react';
-import './Footer.css';
 const Footer = () => {
   return (
     <footer className="w-100 mt-auto bg-secondary p-4">
@@ -10,3 +9,4 @@ const Footer = () => {
             </div>
             </footer>
   )};
+  export default Footer;
