@@ -1,12 +1,22 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../utils/mutations';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import {
+  Container,
+  Row,
+  Col,
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+} from "reactstrap";
+import { useMutation } from "@apollo/client";
+import { LOGIN_USER } from "../utils/mutations";
 
-import Auth from '../utils/auth';
+import Auth from "../utils/auth";
 
 const Login = (props) => {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
   // update state based on form input changes
@@ -35,59 +45,64 @@ const Login = (props) => {
 
     // clear form values
     setFormState({
-      email: '',
-      password: '',
+      email: "",
+      password: "",
     });
   };
 
   return (
-    <main className="flex-row justify-center mb-5 mt-5">
-      <div className="col-6 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
-          <div className="card-body">
-            {data ? (
-              <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
-              </p>
-            ) : (
-              <form onSubmit={handleFormSubmit}>
-                <input
-                  className="form-input"
-                  placeholder="Your email"
-                  name="email"
+    <Container>
+      <Row>
+        <Col md={{ size: 6, offset: 3 }} className="mt-5 mb-5">
+          <h4 className="p-2">Login</h4>
+          {data ? (
+            <p>
+              Success! You may now head{" "}
+              <Link to="/">back to the homepage.</Link>
+            </p>
+          ) : (
+            <Form onSubmit={handleFormSubmit}>
+              <FormGroup className="mt-2">
+                <Label for="exampleEmail">Email</Label>
+                <Input
                   type="email"
+                  name="email"
+                  id="exampleEmail"
+                  placeholder="email"
                   value={formState.email}
                   onChange={handleChange}
                 />
-                <input
-                  className="form-input"
-                  placeholder="******"
-                  name="password"
+              </FormGroup>
+              <FormGroup className="mt-2">
+                <Label for="examplePassword">Password</Label>
+                <Input
                   type="password"
+                  name="password"
+                  id="examplePassword"
+                  placeholder="password"
                   value={formState.password}
                   onChange={handleChange}
                 />
-                <button
-                  className="btn btn-block btn-primary"
-                  style={{ cursor: 'pointer' }}
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </form>
-            )}
-
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
+              </FormGroup>
+              <Button
+                className="mt-3"
+                style={{ cursor: "pointer" }}
+                type="submit"
+              >
+                Login
+              </Button>
+              <div className="mt-1">
+              <a href="/signup">Signup</a>
               </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </main>
+            </Form>
+          )}
+
+          {error && (
+            <div className="my-3 p-3 bg-danger text-white">{error.message}</div>
+          )}
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

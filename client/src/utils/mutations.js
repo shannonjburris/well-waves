@@ -2,36 +2,35 @@
 import { gql } from '@apollo/client';
 
 export const LOGIN_USER = gql`
-  mutation login($username: String!, $email: String!, $password: String!) {
-    login(username: $username, email: $email, password: $password) {
+  mutation login( $email: String!, $password: String!) {
+    login( email: $email, password: $password) {
       token
-      profile {
+      users {
         _id
-        name
+        email
       }
     }
   }
 `;
 
 export const ADD_USER = gql`
-  mutation addUser($username: String!, $email: String!, $password: String!) {
-    addUser(username: $username, email: $email, password: $password) {
+  mutation addUser( $email: String!, $password: String!) {
+    addUser( email: $email, password: $password) {
       token
-      user {
+      users {
         _id
-        username
+        email
       }
     }
   }
 `;
 
 export const ADD_SOUND = gql`
-mutation addSound($name: String!, $length: Number!, $tags: String!, $link: String!) {
-    addSound(name: $name, length: $length, tags: $tags, link: $link) {
+mutation addSound($name: String!, $tags: String!, $link: String!) {
+    addSound(name: $name, tags: $tags, link: $link) {
       sound {
         _id
         name
-        length
         link
       }
     }
