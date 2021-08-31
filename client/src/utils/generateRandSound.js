@@ -1,15 +1,20 @@
-import React from 'react';
-import Explore from '../pages/Explore';
+import React, { useState } from 'react';
 
-const generateSound = (props) => {
-    <div id='randomSound'>
-        <div>
-            <script>
-                document.getElementById("randomSound").innerHTML =
-                Math.floor(Math.random() * 100);
-                console.log(randomSound);
-            </script>
-        </div>
-    </div>
-}
-export default generateSound;
+
+const GenerateSound = () => {
+    const [number, setNumber] = useState(0)
+    const randSound = () => setNumber(Math.floor(Math.random()* 10))
+    console.log("render Container")
+    return (
+        <>
+          <p>{number}</p>
+          <RandomButton randSound={randSound}/>
+        </>
+    )
+  }
+  const RandomButton = ({randSound}) => {
+     console.log("render RandomButton")
+     return <button onClick={randSound}>Generate</button>
+  }
+  export default GenerateSound;
+  
