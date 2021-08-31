@@ -1,5 +1,4 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+const { Schema, model } = require('mongoose');
 
 const SoundsSchema = new Schema({
   name: {
@@ -7,27 +6,25 @@ const SoundsSchema = new Schema({
     trim: true,
     required: "String is Required"
   },
-
-  length: {
-    type: Number,
-    required: true
-  },
-
   tags: {
     type: String
   },
-  
   id: {
     type: Number,
     unique: true,
     required: true
   },
-  profiles: {
+  link: {
+    type: String
+  },
+  users: [
+    {
     type: Schema.Types.ObjectId,
-    ref: 'Profile'
+    ref: 'User'
   }
+]
 });
 
-const Sounds = mongoose.model("Sounds", SoundsSchema);
+const Sounds = model("Sounds", SoundsSchema);
 
 module.exports = Sounds;
