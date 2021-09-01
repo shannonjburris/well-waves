@@ -3,11 +3,14 @@ import GenerateSound from '../utils/generateRandSound';
 import { QUERY_SOUNDS } from '../utils/queries';
 import { useQuery } from '@apollo/client';
 
+
 const Explore = () => {
-  const { loading, data } = useQuery(QUERY_SOUNDS, {
+  const { loading, data } = useQuery(QUERY_SOUNDS,  {
     fetchPolicy: "no-cache"
   });
   const soundList = data?.sounds || [];
+ 
+  
 
   return (
     <div>
@@ -23,12 +26,12 @@ const Explore = () => {
 
               <figure key={sound._id}>
                 <figcaption>Listen {sound.name}:</figcaption>
-                <audio
+                <audio 
                   controls
                   src= {sound.link}>
                   Your browser does not support the
-            <code>audio</code> element.
-    </audio>
+            <code>audio</code> element.  
+               </audio> 
               </figure>
 
             );
