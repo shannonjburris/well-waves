@@ -1,8 +1,212 @@
 [
     {
-    "name": "test",
-    "tags": "sleep",
-    "id": 1,
-    "link": "https://sounds-project-gg.s3.amazonaws.com/mp3+sounds/cityambient.mp3"
+        "name": "City Ambient",
+        "tags": "study",
+        "id": 1,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/mp3+sounds/cityambient.mp3"
+    },
+    {
+        "name": "Singing Bowl",
+        "tags": "calm",
+        "id": 2,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/mp3+sounds/singingbowl.mp3"
+    },
+    {
+        "name": "Desert Ambient",
+        "tags": "study",
+        "id": 3,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/mp3+sounds/desertambient.mp3"
+    },
+    {
+        "name": "Birds",
+        "tags": "calm",
+        "id": 4,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/am_amb70_birds.mp3"
+    },
+    {
+        "name": "Waves",
+        "tags": "calm",
+        "id": 5,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/att_atmos_waves.mp3"
+    },
+    {
+        "name": "Drumming",
+        "tags": "energize",
+        "id": 6,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/DIASPORA_paradise_drum_loop_2_upbeat_calypso_plate_95_bpm.mp3"
+    },
+    {
+        "name": "Night Sopunds",
+        "tags": "calm",
+        "id": 7,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/EAF_Village_Night_Sounds.mp3"
+    },
+    {
+        "name": "Forest",
+        "tags": "study",
+        "id": 8,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/Forest_09.mp3"
+    },
+    {
+        "name": "Melodic Loop",
+        "tags": "energize",
+        "id": 9,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/JU_BK_Melodic_Loop_Bandana_Gm_16Bar_99bpm.mp3"
+    },
+    {
+        "name": "Upbeat Sax",
+        "tags": "energize",
+        "id": 10,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/LSHHLS_Alto_Sax_Loop_19_Fm_88BPM_Wet_Upbeat.mp3"
+    },
+    {
+        "name": "Upbeat Loop",
+        "tags": "energize",
+        "id": 11,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/LSHHLS_Music_Loop_31_Am_88BPM_Upbeat.mp3"
+    },
+    {
+        "name": "Upbeat Vocal Loop",
+        "tags": "energize",
+        "id": 12,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/PALA_vocal_chop_phrase_upbeat_filter_120_Ab.mp3"
+    },
+    {
+        "name": "Waterfall Ambient",
+        "tags": "calm",
+        "id": 13,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/PFS2_Ambient_Waterfall_2.mp3"
+    },
+    {
+        "name": "Campfire",
+        "tags": "study",
+        "id": 14,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/PFS2_Fire_Campfire.mp3"
+    },
+    {
+        "name": "Piano Melody",
+        "tags": "energize",
+        "id": 15,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/PJ_FT_Keys_oneshot_Upbeat_Piano_Phrase_3_Fm.mp3"
+    },
+    {
+        "name": "Rain Sounds",
+        "tags": "calm",
+        "id": 16,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/Rain_11.mp3"
+    },
+    {
+        "name": "Rolling Rain Sounds",
+        "tags": "calm",
+        "id": 17,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/Rain_12.mp3"
+    },
+    {
+        "name": "Rolling Rain",
+        "tags": "calm",
+        "id": 18,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/Rain_14.mp3"
+    },
+    {
+        "name": "Navajo",
+        "tags": "study",
+        "id": 19,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/RU_PMGP_108_Granular_Navajo_Turquoise001_Em.mp3"
+    },
+    {
+        "name": "Malaya",
+        "tags": "study",
+        "id": 20,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/RU_PMGP_62_Plant_Malaya_Garnet_Abm.mp3"
+    },
+    {
+        "name": "Jungle",
+        "tags": "study",
+        "id": 21,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/RU_PMGP_80_Granular_Jungle_Emerald_Cm.mp3"
+    },
+    {
+        "name": "Theremin",
+        "tags": "study",
+        "id": 22,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/RU_TE_120_theremin_four_voices_energic_fades_violin_timbre_Gmin.mp3"
+    },
+    {
+        "name": "Guitar Loop",
+        "tags": "energize",
+        "id": 23,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/SC_ES_90_guitar_melody_happy_Ebmaj.mp3"
+    },
+    {
+        "name": "Melodic Guitar Loop",
+        "tags": "study",
+        "id": 24,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/SO_AM_114_melodic_loop_krishna_Cmaj.mp3"
+    },
+    {
+        "name": "Upbeat Chords",
+        "tags": "energize",
+        "id": 25,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/SO_CV_100_guitar_chords_loop_dancehall_upbeat_Emaj.mp3"
+    },
+    {
+        "name": "Artichoke Chords",
+        "tags": "energize",
+        "id": 26,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/SO_RE_80_guitar_rhythm_artichoke_Abmaj.mp3"
+    },
+    {
+        "name": "Shimmer",
+        "tags": "calm",
+        "id": 27,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/Soundiron_Shimmer_Riser_83.mp3"
+    },
+    {
+        "name": "Upbeat Bass",
+        "tags": "energize",
+        "id": 28,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/SPARKEE_bass_loop_funky12_120_Am.mp3"
+    },
+    {
+        "name": "Tibetan Bowl",
+        "tags": "calm",
+        "id": 28,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/Tibetan_Bowl_1.mp3"
+    },
+    {
+        "name": "Tropical Guitar",
+        "tags": "energize",
+        "id": 29,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/UGS_Guitar_Upbeat_Pop_Tropical_115bpm_Dmin.mp3"
+    },
+    {
+        "name": "Funky Sub Bass",
+        "tags": "energize",
+        "id": 30,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/Upbeat_Sub_Bass_Loop.mp3"
+    },
+    {
+        "name": "Atomosphere",
+        "tags": "study",
+        "id": 31,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/V_RIOT_atmosphere_angels_D.mp3"
+    },
+    {
+        "name": "Happpy Atomosphere",
+        "tags": "study",
+        "id": 32,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/V_RIOT_atmosphere_optimistic_E.mp3"
+    },
+    {
+        "name": "Quantum Atomosphere",
+        "tags": "study",
+        "id": 33,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/V_RIOT_atmosphere_quantum_F.mp3"
+    },
+    {
+        "name": "Atoms",
+        "tags": "study",
+        "id": 34,
+        "link": "https://sounds-project-gg.s3.amazonaws.com/Frequencies+MP3s/WaterLine_G%23_Atmos+1.mp3"
     }
 ]
