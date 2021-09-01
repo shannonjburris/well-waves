@@ -5,10 +5,8 @@ import "./index.css";
 const MusicButton = (props) => {
   return (
     <div className="music-buttons">
-      <Button color={props.color} size="lg" ClassName="music-button">
-        <a href={props.link} className="music-button-link">
+      <Button href={props.link} color={props.color} className="music-button">
           {props.title}
-        </a>
       </Button>
     </div>
   );

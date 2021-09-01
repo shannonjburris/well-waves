@@ -27,26 +27,6 @@ function Home() {
                   <MusicButton color="success" title="Energize" />
                 </Col>
               </Row>
-              <Row>
-                <Col className="music-button-col">
-                  <MusicButton color="success" title="Energize" />
-                </Col>
-              </Row>
-              <Row>
-                <Col className="music-button-col">
-                  <MusicButton color="success" title="Energize" />
-                </Col>
-              </Row>
-              <Row>
-                <Col className="music-button-col">
-                  <MusicButton color="success" title="Energize" />
-                </Col>
-              </Row>
-              <Row>
-                <Col className="music-button-col">
-                  <MusicButton color="success" title="Energize" />
-                </Col>
-              </Row>
             </Col>
           </Row>
         </Col>

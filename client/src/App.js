@@ -42,7 +42,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
     <Router>
-    <div>
+ <>
       <Header />
       <Switch>
         <Route exact path="/" component={Home} />
@@ -53,11 +53,8 @@ function App() {
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
       </Switch>
-    </div>
-    <div>
-    <Footer />
-    </div>
-
+      <Footer />
+   </>
   </Router>
   </ApolloProvider>
   );

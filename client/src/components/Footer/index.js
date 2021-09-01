@@ -5,7 +5,7 @@ import "./index.css"
 
 const Footer = () => {
   return (
-    <div>
+  
     <footer className="w-100 mt-auto pt-4">
       <div className="container">
         <div className="links">
@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-    </div>
+   
   );
 };
 
