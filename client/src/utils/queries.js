@@ -6,7 +6,6 @@ export const QUERY_SOUNDS = gql`
         sounds {
             _id
             name
-            length
             tags
             link
         }
@@ -15,10 +14,9 @@ export const QUERY_SOUNDS = gql`
 
 export const QUERY_SINGLE_SOUNDS = gql`
     query getSingleSound($soundId: ID!) {
-        sound(soundId: $soundId) {
+        sounds(soundId: $soundId) {
             _id
             name
-            length
             tags
             link
         }

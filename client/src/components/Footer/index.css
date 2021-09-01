@@ -1,0 +1,32 @@
+:root {
+    --darkblue: #111426;
+    --grayblue: #455359;
+    --tan: #A6A085;
+    --peach: #BF7D65;
+    --coral: #F25E5E;
+}
+
+footer {
+    background-color: var(--grayblue);
+    position: fixed;
+    bottom: 0;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    color: var(--tan) !important;
+}
+
+.icon:hover {
+    color: var(--coral) !important;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 10px;
+    color: var(--tan);
+}
