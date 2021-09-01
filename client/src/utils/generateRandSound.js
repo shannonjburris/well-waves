@@ -3,18 +3,32 @@ import React, { useState } from 'react';
 
 const GenerateSound = () => {
     const [number, setNumber] = useState(0)
-    const randSound = () => setNumber(Math.floor(Math.random()* 10))
-    console.log("render Container")
+    const randomId = () => setNumber(Math.floor(Math.random()* 100))
+    const healWaves = [
+        { id: 1, filename: "In-The-Garden.mp3"},
+        { id: 2, filename: "2.mp3"},
+        { id: 3, filename: "3.mp3"},
+        { id: 4, filename: "4.mp3"},
+        { id: 5, filename: "5.mp3"},
+        { id: 6, filename: "6.mp3"},
+        { id: 7, filename: "7.mp3"},
+        { id: 8, filename: "8.mp3"},
+        { id: 9, filename: "9.mp3"},
+        { id: 10, filename: "10.mp3"}
+    ];
+    
+    console.log(healWaves[number]);
     return (
         <>
           <p>{number}</p>
-          <RandomButton randSound={randSound}/>
+          <RandomButton randSound={randomId}/>
         </>
     )
   }
-  const RandomButton = ({randSound}) => {
+  const RandomButton = ({randomId}) => {
      console.log("render RandomButton")
-     return <button onClick={randSound}>Generate</button>
+     return <button onClick={randomId}>Generate</button>
   }
   export default GenerateSound;
+  
   

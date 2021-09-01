@@ -6,6 +6,7 @@ import { useQuery, useMutation } from "@apollo/client";
 import {useHistory} from "react-router-dom"
 import { Button } from "reactstrap";
 
+
 const Explore = () => {
   const [savedSounds, setSavedSounds] = useState({
     
@@ -17,6 +18,8 @@ const Explore = () => {
     fetchPolicy: "no-cache",
   });
   const soundList = data?.sounds || [];
+ 
+  
 
 
 
