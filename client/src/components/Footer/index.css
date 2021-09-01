@@ -30,3 +30,7 @@ footer {
     margin-top: 10px;
     color: var(--tan);
 }
+
+p {
+    margin-bottom: 0 !important;
+}

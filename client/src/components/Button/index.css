@@ -1,0 +1,13 @@
+.music-buttons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.music-button {
+    width: 200px !important;
+}
+
+.music-button-link {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}

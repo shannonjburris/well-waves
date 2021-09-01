@@ -5,9 +5,10 @@ import "./index.css"
 
 const Footer = () => {
   return (
+  
     <footer className="w-100 mt-auto pt-4">
-      <div class="container">
-        <div class="links">
+      <div className="container">
+        <div className="links">
           <a
             href="https://github.com/RLAQUEA/final-project"
             target="_blank"
@@ -21,6 +22,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+   
   );
 };
 
