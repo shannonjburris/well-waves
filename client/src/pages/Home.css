@@ -1,0 +1,20 @@
+.homepage-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.main-section, .sidebar {
+    border: 1px solid black;
+}
+
+.music-button-row {
+    
+}
+
+.music-button-col {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+}
+
+

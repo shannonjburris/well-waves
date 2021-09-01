@@ -36,17 +36,22 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    addSound: async (parent, { userId, sounds }) => {
-      return User.findOneAndUpdate(
-        { _id: userId },
-        {
-          $addToSet: { sounds: sounds },
-        },
-        {
-          new: true,
-          runValidators: true,
-        }
-      );
+    addUserSound: async (parent, { soundData }, context) => {
+      console.log("adding sound with " + soundDate + " to user");
+      if(context.user) {
+        return User.findOneAndUpdate(
+          { _id: context.user._id },
+          {
+            $push: {
+              sounds: soundData
+            }
+          },
+          {
+            new: true,
+            runValidators: true,
+          }
+        );
+      }
     },
     removeSound: async (parent, { userId, sounds }) => {
       return User.findOneAndUpdate(

@@ -53,8 +53,11 @@ function App() {
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
       </Switch>
-      <Footer />
     </div>
+    <div>
+    <Footer />
+    </div>
+
   </Router>
   </ApolloProvider>
   );
