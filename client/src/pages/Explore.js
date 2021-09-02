@@ -8,37 +8,32 @@ import { Button } from "reactstrap";
 
 
 const Explore = () => {
-  const [savedSounds, setSavedSounds] = useState({
-    
-  })
-  
+ 
   const history = useHistory();
 
-
+  //Query to retrieve all sounds
   const { loading, data } = useQuery(QUERY_SOUNDS, {
     fetchPolicy: "no-cache",
   });
   const soundList = data?.sounds || [];
  
 
-
+  // Add sounds by user
   const [addUserSound, { error }] = useMutation(ADD_USER_SOUND);
 
   const handleClick = async (id) => {
-    console.log(id)
+   
     try {
+      console.log(id)
       const { data } = await addUserSound({
-        variables: { id },
+        variables: {"soundData": id},
       });
-
-      history.push(`/favorites/${data.addUserSound._id}`);
+      console.log(data)
+      // history.push(`/favorites/${data.addUserSound._id}`);
     } catch (err) {
       console.error(err);
     }
   };
-
-
-
 
   return (
     <div>

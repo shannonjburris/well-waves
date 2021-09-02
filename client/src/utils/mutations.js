@@ -37,15 +37,13 @@ export const ADD_SOUND = gql`
 `;
 
 export const ADD_USER_SOUND = gql`
-  mutation addUserSound($soundData: ID!) {
-    addUserSound(soundData: $soundData) {
+mutation addUserSound($soundData: ID!) {
+  addUserSound(soundData: $soundData) {
+    _id
+    email
+    sounds {
       _id
-      email
-      sounds {
-        _id
-        name
-        link
-      }
     }
   }
+}
 `;
