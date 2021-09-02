@@ -42,9 +42,16 @@ img {
 }
 
 
-@media only screen and (max-width: 549px) {
+
+
+
+
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
     img {
-        height: 275px;
+        height: 300px;
+        width: 415px;
     }
 
     .audio-player {
@@ -57,39 +64,16 @@ img {
     .favorite-button {
         position: absolute;
         bottom: 15px;
-        right: 15px;
-    }
-
-    .sidebar {
-        margin-top: 20px !important;
-    }
-}
-
-@media only screen and (max-width: 600px) and (min-width: 550px) {
-    img {
-        height: 300px;
-        width: 525px;
-    }
-
-    .audio-player {
-        position: absolute;
-        bottom: 100px;
-        left: 110px;
-        color: #ffffff;
-    }
-
-    .favorite-button {
-        position: absolute;
-        bottom: 15px;
         right: 10px;
     }
 
     .sidebar {
         margin-top: 20px !important;
     }
-}
+ }
 
-@media only screen and (min-width: 601px) and (max-width: 800px) {
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
     img {
         height: 300px;
         width: 525px;
@@ -111,12 +95,13 @@ img {
     .sidebar {
         margin-top: 20px !important;
     }
-}
-
-@media only screen and (min-width: 800px) and (max-width: 1050px) {
+ }
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
     img {
-        height: 300px;
-        width: 525px;
+        height: 350px;
+        width: 600px;
     }
 
     .audio-player {
@@ -129,34 +114,60 @@ img {
     .favorite-button {
         position: absolute;
         bottom: 15px;
-        right: 0px;
+        right: 110px;
     }
 
     .sidebar {
         margin-top: 20px !important;
     }
-}
-
-@media only screen and (min-width: 1400px) {
+ }
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
     img {
-        height: 300px;
-        width: 525px;
+        height: 350px;
+        width: 600px;
     }
 
     .audio-player {
         position: absolute;
-        bottom: 100px;
-        left: 110px;
+        bottom: 125px;
+        left: 150px;
         color: #ffffff;
     }
 
     .favorite-button {
         position: absolute;
         bottom: 15px;
-        right: 350px;
+        right: 110px;
     }
 
     .sidebar {
         margin-top: 0px !important;
     }
-}
+ }
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+    img {
+        height: 450px;
+        width: 800px;
+    }
+
+    .audio-player {
+        position: absolute;
+        bottom: 125px;
+        left: 240px;
+        color: #ffffff;
+    }
+
+    .favorite-button {
+        position: absolute;
+        bottom: 15px;
+        right: 180px;
+    }
+
+    .sidebar {
+        margin-top: 0px !important;
+    }
+ } 
