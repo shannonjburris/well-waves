@@ -23,5 +23,20 @@ export const QUERY_SINGLE_SOUNDS = gql`
     }
 `;
 
+export const QUERY_ME = gql` 
+query Me {
+    me {
+      _id
+      email
+      password
+      sounds {
+        _id
+        name
+        link
+        tags
+      }
+    }
+  }
+`;
 
 
