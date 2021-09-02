@@ -12,6 +12,7 @@ function Favorite() {
   });
 
   const user = data?.me || data?.user || {};
+  const savedSounds = user.sounds;
 
   // redirect to personal profile page if username is yours
   if (Auth.loggedIn() && Auth.getProfile().data.email === userParam) {
@@ -35,18 +36,21 @@ function Favorite() {
   return (
     <div>
       <h1>hello</h1>
-      {/* {Object.keys(user).map((sounds) => sounds.sounds.map((sound) => {
-        return (
+  
+    {savedSounds.map((sound, index) => {
+      return (
+        <div className="sound-card">
           <figure key={sound._id}>
-            <figcaption>Listen {sound.name}:</figcaption>
-            <audio controls src={sound.link}>
-              Your browser does not support the
+                <figcaption>Listen {sound.name}:</figcaption>
+                <audio controls src={sound.link}>
+                  Your browser does not support the
                   <code>audio</code> element.
                 </audio>
-
           </figure>
-        );
-      }))} */}
+        </div>
+        )
+    })}
+    
       </div>
   )};
 

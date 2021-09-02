@@ -44,12 +44,7 @@ export const QUERY_USER = gql`
     user(email: $email) {
       _id
       email
-      sounds {
-        _id
-        name
-        link
-        tag
-      }
+      sounds 
     }
   }
 `;
