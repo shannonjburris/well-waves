@@ -8,8 +8,6 @@
 
 footer {
     background-color: var(--grayblue);
-    position: fixed;
-    bottom: 0;
 }
 
 .links {
