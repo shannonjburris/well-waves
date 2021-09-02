@@ -6,7 +6,7 @@ import "./index.css"
 const Footer = () => {
   return (
   
-    <footer className="w-100 mt-auto pt-4">
+    <footer className="w-100 pt-4 pb-3">
       <div className="container">
         <div className="links">
           <a

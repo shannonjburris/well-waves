@@ -1,14 +1,38 @@
 .homepage-container {
     margin-top: 50px;
-    margin-bottom: 15%;
+    margin-bottom: 8%;
 }
 
-.main-section, .sidebar {
-    border: 1px solid black;
+.main-img-container {
+    position: relative;
 }
 
-.music-button-row {
-    
+img {
+    height: 350px;
+    box-shadow: rgba(0, 0, 0) 0px 5px 20px;
+}
+
+.audio-player {
+    position: absolute;
+    bottom: 125px;
+    left: 110px;
+    color: #ffffff;
+}
+
+
+.tags {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.favorite-button {
+    position: absolute;
+    bottom: 15px;
+    right: 100px;
 }
 
 .music-button-col {
@@ -18,3 +42,97 @@
 }
 
 
+@media only screen and (max-width: 549px) {
+    img {
+        height: 275px;
+    }
+
+    .audio-player {
+        position: absolute;
+        bottom: 100px;
+        left: 60px;
+        color: #ffffff;
+    }
+
+    .favorite-button {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .sidebar {
+        margin-top: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 550px) {
+    img {
+        height: 300px;
+        width: 525px;
+    }
+
+    .audio-player {
+        position: absolute;
+        bottom: 100px;
+        left: 110px;
+        color: #ffffff;
+    }
+
+    .favorite-button {
+        position: absolute;
+        bottom: 15px;
+        right: 10px;
+    }
+
+    .sidebar {
+        margin-top: 20px !important;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+    img {
+        height: 300px;
+        width: 525px;
+    }
+
+    .audio-player {
+        position: absolute;
+        bottom: 100px;
+        left: 110px;
+        color: #ffffff;
+    }
+
+    .favorite-button {
+        position: absolute;
+        bottom: 15px;
+        right: 5px;
+    }
+
+    .sidebar {
+        margin-top: 20px !important;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1050px) {
+    img {
+        height: 300px;
+        width: 525px;
+    }
+
+    .audio-player {
+        position: absolute;
+        bottom: 100px;
+        left: 110px;
+        color: #ffffff;
+    }
+
+    .favorite-button {
+        position: absolute;
+        bottom: 15px;
+        right: 0px;
+    }
+
+    .sidebar {
+        margin-top: 20px !important;
+    }
+}
