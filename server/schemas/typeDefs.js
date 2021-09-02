@@ -23,7 +23,9 @@ const typeDefs = gql`
     users: User
   }
 
+
   type Query {
+    me: User
     users: User
     sounds: [Sound]
     user(userId: ID!): User
@@ -31,9 +33,10 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    addSound(name: String!, tag: String!, link: String!): Sound
+    addSound(name: String!, tag: String!): Sound
     removeSound(name: String!, tag: String!): Sound
     addUserSound(soundData: ID!): User
+
     addUser(email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
   }

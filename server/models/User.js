@@ -16,7 +16,7 @@ const userSchema = new Schema({
   sounds: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Sound'
+      ref: 'Sounds'
     }
   ]
 });
