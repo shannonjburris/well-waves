@@ -9,7 +9,7 @@ function Home() {
   return (
     <Container className="homepage-container">
       <Row>
-        <Col md="8" sm="12" className="main-section">
+        <Col lg="9" md="12" sm="12" className="main-section">
           <h4>Daily Sound:</h4>
           <Row>
             <Col>
@@ -38,7 +38,7 @@ function Home() {
             </Col>
           </Row>
         </Col>
-        <Col md="4" className="sidebar">
+        <Col lg="3"md="12" className="sidebar">
           <h4>Explore by Intention:</h4>
           <Row>
             <Col md="12">
