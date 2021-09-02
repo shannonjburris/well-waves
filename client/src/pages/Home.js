@@ -44,11 +44,7 @@ function Home() {
             <Col md="12">
               <Row className="music-button-row">
                 <Col className="music-button-col">
-
                   <MusicButton color="primary" title="Calm" link="/calm"/>
-
-              
-
                 </Col>
               </Row>
               <Row>

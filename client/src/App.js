@@ -15,6 +15,9 @@ import Home from "./pages/Home";
 import Favorites from "./pages/Favorites";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Calm from "./pages/Calm";
+import Study from "./pages/Study";
+import Energize from "./pages/Energize";
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -52,6 +55,9 @@ function App() {
         <Route path="/favorites" component={Favorites} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
+        <Route path="/calm" component={Calm} />
+        <Route path="/study" component={Study} />
+        <Route path="/energize" component={Energize} />
       </Switch>
       <Footer />
    </>
