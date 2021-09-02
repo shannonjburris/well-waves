@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col, Button } from "reactstrap";
 import MusicButton from "../components/Button";
 import SoundWaves from "../assets/sound-waves.jpg";
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 function Home() {
@@ -43,7 +44,7 @@ function Home() {
             <Col md="12">
               <Row className="music-button-row">
                 <Col className="music-button-col">
-                  <MusicButton color="primary" title="Calm" />
+                  <MusicButton  color="primary" title="Calm" />
                 </Col>
               </Row>
               <Row>
