@@ -1,6 +1,6 @@
 .homepage-container {
     margin-top: 50px;
-    margin-bottom: 8%;
+    margin-bottom:15%;
 }
 
 .main-img-container {
@@ -134,5 +134,29 @@ img {
 
     .sidebar {
         margin-top: 20px !important;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    img {
+        height: 300px;
+        width: 525px;
+    }
+
+    .audio-player {
+        position: absolute;
+        bottom: 100px;
+        left: 110px;
+        color: #ffffff;
+    }
+
+    .favorite-button {
+        position: absolute;
+        bottom: 15px;
+        right: 350px;
+    }
+
+    .sidebar {
+        margin-top: 0px !important;
     }
 }

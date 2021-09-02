@@ -44,17 +44,21 @@ function Home() {
             <Col md="12">
               <Row className="music-button-row">
                 <Col className="music-button-col">
-                  <MusicButton  color="primary" title="Calm" />
+
+                  <MusicButton color="primary" title="Calm" link="/calm"/>
+
+              
+
                 </Col>
               </Row>
               <Row>
                 <Col className="music-button-col">
-                  <MusicButton color="secondary" title="Study" />
+                  <MusicButton color="secondary" title="Study" link="study"/>
                 </Col>
               </Row>
               <Row>
                 <Col className="music-button-col">
-                  <MusicButton color="success" title="Energize" />
+                  <MusicButton color="success" title="Energize" link="/energize"/>
                 </Col>
               </Row>
             </Col>
