@@ -38,5 +38,14 @@ query Me {
     }
   }
 `;
-
+// added to test fav page
+export const QUERY_USER = gql`
+  query user($email: String!) {
+    user(email: $email) {
+      _id
+      email
+      sounds 
+    }
+  }
+`;
 
