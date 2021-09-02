@@ -7,8 +7,13 @@ const resolvers = {
     sounds: async () => {
       return Sounds.find();
     },
-    sound: async (parent, { soundsId }) => {
-      return Sounds.findOne({ _id: soundsId });
+    sound: async (parent, { soundId }) => {
+      return Sounds.findOne({ _id: soundId });
+    },
+    me: async (parent, args, context) => {
+      if(context.user) {
+      return User.findOne({ _id: context.user._id }).populate("sounds");
+      }
     },
   },
 
@@ -37,7 +42,8 @@ const resolvers = {
       return { token, user };
     },
     addUserSound: async (parent, { soundData }, context) => {
-      console.log("adding sound with " + soundDate + " to user");
+      console.log("adding sound with " + soundData + " to user");
+      console.log("adding sound to user" + context.user);
       if(context.user) {
         return User.findOneAndUpdate(
           { _id: context.user._id },

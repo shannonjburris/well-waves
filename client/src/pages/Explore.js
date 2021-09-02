@@ -11,6 +11,7 @@ const Explore = () => {
   const [savedSounds, setSavedSounds] = useState({
     
   })
+  
   const history = useHistory();
 
 
@@ -19,9 +20,6 @@ const Explore = () => {
   });
   const soundList = data?.sounds || [];
  
-  
-
-
 
 
   const [addUserSound, { error }] = useMutation(ADD_USER_SOUND);

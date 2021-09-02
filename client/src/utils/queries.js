@@ -14,7 +14,7 @@ export const QUERY_SOUNDS = gql`
 
 export const QUERY_SINGLE_SOUNDS = gql`
     query getSingleSound($soundId: ID!) {
-        sounds(soundId: $soundId) {
+        sound(soundId: $soundId) {
             _id
             name
             tags
@@ -22,5 +22,6 @@ export const QUERY_SINGLE_SOUNDS = gql`
         }
     }
 `;
+
 
 
