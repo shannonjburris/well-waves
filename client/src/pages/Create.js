@@ -15,6 +15,10 @@ export default function Create() {
     const handleClick = () => {
       setPlaybackRate(playbackRate + 0.1);
       play();
+
+      // number player
+      
+
     };
 
 
