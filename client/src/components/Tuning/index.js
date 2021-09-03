@@ -1,13 +1,9 @@
 import React from 'react';
 import useSound from 'use-sound';
 // import test from '../assets/sounds/sprite.mp3';
-import TuningFork from '../components/Tuning'
-import Sprite from '../components/Sprite'
-import "./Create.css"
 
-
-export default function Create() {
-    let soundUrlBowl = '../assets/sounds/singingbowl.mp3';
+ const TuningFork = () => {
+    let soundUrlBowl = '../assets/sounds/tuningfork.mp3';
   
     const [playbackRate, setPlaybackRate] = React.useState(0.75);
   
@@ -21,27 +17,24 @@ export default function Create() {
       setPlaybackRate(playbackRate + 0.1);
       play();
 
-     
+      // number player
       
     };
 
 
     
     return (
-    <div class="create-container">
-        <h4>Singing Bowl</h4>
-        <p id="create-desc">Click the bowl to make the singing bowl sing and experiment with frequency. The more you click, the higher it gets.</p>
+    <div>
+        <h4>Tuning Fork</h4>
+        <p></p>
       <button onClick={handleClick.bind()}>
         <span id="../assets/sounds/singingbowl.mp3" role="img" aria-label="Heart">
-        <div>🥣 </div>
+        <p>TUNING FORK</p>
         </span>
       </button>
-      <div class="tuning-fork">
-      <TuningFork></TuningFork>
-      </div>
-      <div class="sprite"></div>
-      <Sprite></Sprite>
     </div>
     
     );
   }
+
+  export default TuningFork;
