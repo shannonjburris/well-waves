@@ -3,15 +3,30 @@
     margin: 0 auto;
     padding: 40px;
     margin-top: 5px;
-    margin-left: 20px;
+    padding: 5% !important;
+    display: flex;
+    justify-content: space-evenly !important;
+    align-items: end;
+    flex-direction: row;
+    bottom: 0%;
 }
 
 .tuning-fork {
    margin-top: 5rem;
+   border: 2px white solid;
+   padding: 3%;
 }
 
 .sprite {
     margin-top: 5rem;
+ 
+}
+
+.bowl {
+    margin-right: 20%;
+    margin-left: 5%;
+    border: 2px white solid;
+    padding: 3%;
 }
 
 #create-desc{
@@ -28,3 +43,4 @@ button {
     margin: 0 auto;
 
 }
+

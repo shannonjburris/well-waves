@@ -26,6 +26,7 @@ import "./index.css"
   })
   return (
     <container class="container">
+      <div class="chord-machine">
     <h4 id="header">Chord Machine</h4>
       <button
         aria-label="c"
@@ -46,7 +47,7 @@ import "./index.css"
         3
       </button>
 
-
+</div>
     </container>
   );
 }

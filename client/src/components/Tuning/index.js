@@ -24,7 +24,7 @@ import useSound from 'use-sound';
 
     
     return (
-    <div>
+    <div id="instrument">
         <h4>Tuning Fork</h4>
         <p></p>
       <button onClick={handleClick.bind()}>
