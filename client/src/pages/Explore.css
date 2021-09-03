@@ -1,9 +1,6 @@
-.add-button {
-    display: inline;
+button.add-button {
+    display: inline-block;
     border-radius: 360px !important;
-    position: absolute;
-    bottom: 15px;
-    left: 310px;
     background-color: green !important;
 
 }
@@ -14,4 +11,44 @@ figure {
 
 h6, h4, figcaption {
     color: #ffffff;
+}
+
+.col.header {
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.sounds-wrapper {
+    width: 100%;
+    max-width: 1130px;
+    margin: 0 2rem;
+}
+
+.square {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sound-tile {
+    width: calc(33.3333% - 2rem);
+}
+
+@media(max-width: 1200px) {
+    .sound-tile {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media(max-width: 1000px) {
+    .sound-tile {
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
+
+footer {
+    display: block;
+    position: relative;
 }

@@ -35,21 +35,20 @@ const Explore = () => {
 
   return (
     <Container className="explore-container mt-5">
+      <Col className="header">
+        <h4>
+          There's a world of sound out there just waiting to be discovered.
+        </h4>
+      </Col>
       <Row>
-        <Col>
-          <h4>
-            There's a world of sound out there just waiting to be discovered.
-          </h4>
-          
-        </Col>
-        <Col className="d-flex justify-content-center">
+        <Col className="d-flex justify-content-center sounds-wrapper">
           {loading ? (
             <div>Loading...</div>
           ) : (
             <div className="square">
               {soundList.map((sound) => {
                 return (
-                  <figure key={sound._id}>
+                  <figure key={sound._id} className="sound-tile">
                     <figcaption>{sound.name}:</figcaption>
                     <audio controls src={sound.link}>
                       Your browser does not support the
