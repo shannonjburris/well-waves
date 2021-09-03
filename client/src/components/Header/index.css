@@ -13,6 +13,7 @@
 .nav-brand {
     color: var(--tan) !important;
     font-size: 1.75rem !important;
+    font-family: 'Pacifico', cursive;
 }
 
 .nav-brand:hover {
@@ -29,6 +30,7 @@
     text-decoration: none !important;
     color: var(--tan);
     font-size: 1.1rem !important;
+    font-family: 'Pacifico', cursive;
 }
 
 .nav-links:hover {
@@ -45,6 +47,7 @@
     text-decoration: none !important;
     color: #ffffff;
     font-size: 1.1rem !important;
+    font-family: 'Pacifico', cursive;
 }
 
 .logout-link {
@@ -54,6 +57,7 @@
     text-decoration: none !important;
     color: #ffffff;
     font-size: 1.1rem !important;
+    font-family: 'Pacifico', cursive;
 }
 
 .login-link:hover, .logout-link:hover {

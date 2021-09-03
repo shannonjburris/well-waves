@@ -33,7 +33,7 @@ const typeDefs = gql`
 
   type Mutation {
     addSound(name: String!, tag: String!): Sound
-    removeSound(name: String!, tag: String!): Sound
+    removeSound(soundData: ID!): User
     addUserSound(soundData: ID!): User
 
     addUser(email: String!, password: String!): Auth
