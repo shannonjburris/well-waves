@@ -59,12 +59,17 @@ const resolvers = {
         );
       }
     },
-    removeSound: async (parent, { userId, sounds }) => {
-      return User.findOneAndUpdate(
-        { _id: userId },
-        { $pull: { sounds: sounds } },
-        { new: true }
-      );
+    removeSound: async (parent, { soundData }, context) => {
+      if (context.user) {
+        return User.findOneAndDelete(
+          { _id: context.user._id },
+          {
+            $pull: {
+              sounds: soundData
+            }
+          }
+        );
+      }
     },
   },
 };

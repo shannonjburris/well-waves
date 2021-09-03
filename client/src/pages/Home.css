@@ -33,6 +33,12 @@ img {
     position: absolute;
     bottom: 15px;
     right: 100px;
+    font-family: 'Pacifico', cursive;
+}
+
+Button {
+    border-radius: 360px !important;
+    background-color: green !important;
 }
 
 .music-button-col {

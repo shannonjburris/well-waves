@@ -47,3 +47,15 @@ mutation addUserSound($soundData: ID!) {
   }
 }
 `;
+
+export const DELETE_USER_SOUND = gql`
+mutation deleteUserSound($soundData: ID!) {
+  deleteUserSound(soundData: $soundData) {
+    _id
+    email
+    sounds {
+      _id
+    }
+  }
+}
+`;
