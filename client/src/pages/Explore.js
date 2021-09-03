@@ -51,7 +51,7 @@ const Explore = () => {
               {soundList.map((sound) => {
                 return (
                   <figure key={sound._id}>
-                    <figcaption>Listen {sound.name}:</figcaption>
+                    <figcaption>{sound.name}:</figcaption>
                     <audio controls src={sound.link}>
                       Your browser does not support the
                       <code>audio</code> element.

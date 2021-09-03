@@ -20,7 +20,7 @@ const SoundCard = () => {
                              console.log("display card")
                             return (
                                 <figure key={sound._id}>
-                                    <figcaption>Listen {sound.name}:</figcaption>
+                                    <figcaption>{sound.name}:</figcaption>
                                     <audio
                                         controls
                                         src={sound.link}>
