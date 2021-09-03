@@ -1,5 +1,8 @@
 import React from "react";
+import { QUERY_SOUNDS } from "../utils/queries";
+import { useQuery, useMutation } from "@apollo/client";
 import { Container, Row, Col, Button } from "reactstrap";
+import { ADD_USER_SOUND } from "../utils/mutations";
 import MusicButton from "../components/Button";
 import SoundWaves from "../assets/sound-waves.jpg";
 
@@ -7,7 +10,40 @@ import SoundWaves from "../assets/sound-waves.jpg";
 import "./Home.css";
 
 function Home() {
+  let randomName;
+  let randomTags;
+  let randomLink;
+  let randomId; 
+
+  const { loading, data } = useQuery(QUERY_SOUNDS, {
+    fetchPolicy: "no-cache",
+  });
+  const soundList = data?.sounds || [];
+  const randomSound = soundList[Math.floor(Math.random() * soundList.length)];
+
+  if (typeof(randomSound) == 'object') {
+    console.log(randomSound);
+    randomName = randomSound.name;
+    randomTags = randomSound.tags;
+    randomLink = randomSound.link;
+    randomId   = randomSound._id;
+  }
+
   // Add sounds by user
+  const [addUserSound, { error }] = useMutation(ADD_USER_SOUND);
+
+  const handleClick = async (id) => {
+    try {
+      console.log(id);
+      const { data } = await addUserSound({
+        variables: { soundData: id },
+      });
+      console.log(data);
+      // history.push(`/favorites/${data.addUserSound._id}`);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   return (
     <Container className="homepage-container">
@@ -20,10 +56,10 @@ function Home() {
                 <img src={SoundWaves} alt="soundwaves" />
                 <div className="audio-player">
                   <figure>
-                    <figcaption>Listen City Ambient:</figcaption>
+                    <figcaption>{randomName}</figcaption>
                     <audio
                       controls
-                      src="https://sounds-project-gg.s3.amazonaws.com/mp3+sounds/cityambient.mp3"
+                      src={randomLink}
                     >
                       Your browser does not support the
                       <code>audio</code> element.
@@ -31,10 +67,11 @@ function Home() {
                   </figure>
                 </div>
                 <div className="tags">
-                  <p className="tag">Tags: Sleep</p>
+                  <p className="tag">Tags: {randomTags}</p>
                 </div>
                 <div className="favorite-button">
-                  <Button className="fButton">+</Button>
+
+                <Button onClick={() => handleClick(randomId)} className="add-button">+</Button>
                 </div>
               </div>
             </Col>
