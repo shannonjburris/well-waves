@@ -1,0 +1,13 @@
+.delete-button {
+    display: inline;
+    border-radius: 360px !important;
+    position: absolute;
+    bottom: 15px;
+    left: 310px;
+    background-color: red !important;
+    font-family: 'Pacifico', cursive;
+}
+
+h1 {
+    color: #ffffff !important;
+}

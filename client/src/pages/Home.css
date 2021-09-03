@@ -35,9 +35,10 @@ img {
     bottom: 15px;
     right: 100px;
     font-family: 'Pacifico', cursive;
+    display: inline;
 }
 
-Button {
+.fButton {
     border-radius: 360px !important;
     background-color: blue!important;
 }

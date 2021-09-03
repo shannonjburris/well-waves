@@ -5,7 +5,8 @@ import { Container, Row, Col, Button } from "reactstrap";
 import { ADD_USER_SOUND } from "../utils/mutations";
 import MusicButton from "../components/Button";
 import SoundWaves from "../assets/sound-waves.jpg";
-import { Link } from "react-router-dom";
+
+
 import "./Home.css";
 
 function Home() {
@@ -72,6 +73,7 @@ function Home() {
                   <p className="tag">Tags: {randomTags}</p>
                 </div>
                 <div className="favorite-button">
+
                 <Button onClick={() => handleClick(randomId)} className="add-button">+</Button>
                 </div>
               </div>
