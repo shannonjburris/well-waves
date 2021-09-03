@@ -13,10 +13,14 @@ h6, h4, figcaption {
     color: #ffffff;
 }
 
+.container {
+    flex-wrap: wrap;
+}
+
 .col.header {
-    max-width: 500px;
     margin: 0 auto 2rem;
     text-align: center;
+    width: 100%;
 }
 
 .sounds-wrapper {
