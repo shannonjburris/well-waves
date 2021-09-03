@@ -55,7 +55,10 @@ function Home() {
                 <img src={SoundWaves} alt="soundwaves" />
                 <div className="audio-player">
                   <figure>
+
+
                     <figcaption>{randomName}</figcaption>
+
                     <audio
                       controls
                       src={randomLink}
