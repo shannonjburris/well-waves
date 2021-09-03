@@ -6,8 +6,8 @@ import "./index.css"
 const Footer = () => {
   return (
   
-    <footer className="w-100 pt-4 pb-3">
-      <div className="container">
+    <footer id="footer-id" className="w-100 pt-4 pb-3">
+      <div className="footer-container">
         <div className="links">
           <a
             href="https://github.com/RLAQUEA/final-project"
