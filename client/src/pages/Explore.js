@@ -40,8 +40,7 @@ const Explore = () => {
           <h4>
             There's a world of sound out there just waiting to be discovered.
           </h4>
-          <h6>Click the button below to explore!</h6>
-          <GenerateSound />
+          
         </Col>
         <Col className="d-flex justify-content-center">
           {loading ? (
