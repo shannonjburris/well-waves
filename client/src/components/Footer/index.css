@@ -11,6 +11,7 @@
     background-color: var(--grayblue);
     position: fixed;
     bottom: 0;
+    max-height: 10%;
 }
 
 
