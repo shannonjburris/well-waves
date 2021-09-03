@@ -35,7 +35,7 @@ const Energize = () => {
             console.log(filteredSounds)
           return (
             <figure key={filteredSounds._id}>
-              <figcaption>Listen {filteredSounds.name}:</figcaption>
+              <figcaption>{filteredSounds.name}:</figcaption>
               <audio controls src={filteredSounds.link}>
                 Your browser does not support the
                 <code>audio</code> element.

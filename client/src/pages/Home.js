@@ -17,7 +17,7 @@ function Home() {
                 <img src={SoundWaves} alt="soundwaves" />
                 <div className="audio-player">
                   <figure>
-                    <figcaption>Listen City Ambient:</figcaption>
+                    <figcaption>City Ambient:</figcaption>
                     <audio
                       controls
                       src="https://sounds-project-gg.s3.amazonaws.com/mp3+sounds/cityambient.mp3"
