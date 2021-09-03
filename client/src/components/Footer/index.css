@@ -1,13 +1,16 @@
 :root {
-    --darkblue: #111426;
-    --grayblue: #455359;
-    --tan: #A6A085;
-    --peach: #BF7D65;
-    --coral: #F25E5E;
+    --darkblue: #42708C;
+    --grayblue: #8FADBF;
+    --tan: #C5D1D9;
+    --peach: #024059;
+    --coral: #010000;
 }
+
 
 footer {
     background-color: var(--grayblue);
+    position: fixed;
+    bottom: 0;
 }
 
 .links {
