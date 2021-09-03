@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Button} from "reactstrap";
 
 
 const GenerateSound = () => {
@@ -20,14 +21,14 @@ const GenerateSound = () => {
     console.log(healWaves[number]);
     return (
         <>
-          <p>{number}</p>
+          {/* <p>{number}</p> */}
           <RandomButton randSound={randomId}/>
         </>
     )
   }
   const RandomButton = ({randomId}) => {
      console.log("render RandomButton")
-     return <button onClick={randomId}>Generate</button>
+     return <Button onClick={randomId} style={{backgroundColor: "green"}}>Generate</Button>
   }
   export default GenerateSound;
   

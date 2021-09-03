@@ -1,13 +1,15 @@
-import React from 'react';
-import { useQuery } from '@apollo/client';
-import { Redirect, useParams } from 'react-router-dom';
-import { QUERY_USER, QUERY_ME } from '../utils/queries';
+import React from "react";
+import { useQuery } from "@apollo/client";
+import { Redirect, useParams } from "react-router-dom";
+import { QUERY_USER, QUERY_ME } from "../utils/queries";
+import { Container, Row, Col } from "reactstrap";
+import "./Favorites.css";
 
 import { useMutation } from "@apollo/client";
 import { DELETE_USER_SOUND } from "../utils/mutations";
-import {Button} from "reactstrap"
+import { Button } from "reactstrap";
 
-import Auth from '../utils/auth';
+import Auth from "../utils/auth";
 
 function Favorite() {
   const { email: userParam } = useParams();
@@ -19,12 +21,7 @@ function Favorite() {
   const user = data?.me || data?.user || {};
   const savedSounds = user.sounds;
 
-
-
-
-
-
-  const [deleteUserSound, { error }] = useMutation(DELETE_USER_SOUND);
+  const [deleteUserSound] = useMutation(DELETE_USER_SOUND);
 
   const handleClick = async (id) => {
     try {
@@ -39,12 +36,6 @@ function Favorite() {
     }
   };
 
-
-
-
-
-
-
   // redirect to personal profile page if username is yours
   if (Auth.loggedIn() && Auth.getProfile().data.email === userParam) {
     return <Redirect to="/favorites" />;
@@ -52,12 +43,11 @@ function Favorite() {
 
   if (loading) {
     return <div>Loading...</div>;
-
   }
 
   if (!user?.email) {
     return (
-      <h4>
+      <h4 className="mt-5 mb-5 text-center">
         You need to be logged in to see this. Use the navigation links above to
         sign up or log in!
       </h4>
@@ -65,25 +55,36 @@ function Favorite() {
   }
 
   return (
-    <div>
-      <h1>Favorites</h1>
-  
-    {savedSounds.map((sound, index) => {
-      return (
-        <div className="sound-card">
-          <figure key={sound._id}>
-                <figcaption>Listen {sound.name}:</figcaption>
-                <audio controls src={sound.link}>
-                  Your browser does not support the
-                  <code>audio</code> element.
-                </audio>
-                <Button onClick={() => handleClick(sound._id)} className="delete-button">-</Button>
-          </figure>
+    <Container className="mt-5 mb-5">
+      <Row>
+        <div>
+          <h1 className="mb-5">Favorites</h1>
+
+          {savedSounds.map((sound, index) => {
+            return (
+              <Col className="d-flex justify-content-center">
+                <div className="sound-card">
+                  <figure key={sound._id}>
+                    <figcaption>Listen {sound.name}:</figcaption>
+                    <audio controls src={sound.link}>
+                      Your browser does not support the
+                      <code>audio</code> element.
+                    </audio>
+                    <Button
+                      onClick={() => handleClick(sound._id)}
+                      className="delete-button"
+                    >
+                      -
+                    </Button>
+                  </figure>
+                </div>
+              </Col>
+            );
+          })}
         </div>
-        )
-    })}
-    
-      </div>
-  )};
+      </Row>
+    </Container>
+  );
+}
 
 export default Favorite;

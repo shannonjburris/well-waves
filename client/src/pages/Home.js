@@ -2,10 +2,13 @@ import React from "react";
 import { Container, Row, Col, Button } from "reactstrap";
 import MusicButton from "../components/Button";
 import SoundWaves from "../assets/sound-waves.jpg";
-import { Link } from "react-router-dom";
+
+
 import "./Home.css";
 
 function Home() {
+  // Add sounds by user
+
   return (
     <Container className="homepage-container">
       <Row>
@@ -31,7 +34,7 @@ function Home() {
                   <p className="tag">Tags: Sleep</p>
                 </div>
                 <div className="favorite-button">
-                  <Button>+</Button>
+                  <Button className="fButton">+</Button>
                 </div>
               </div>
             </Col>

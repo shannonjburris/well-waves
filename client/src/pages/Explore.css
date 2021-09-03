@@ -11,3 +11,7 @@
 figure {
     position: relative;
 }
+
+h6, h4, figcaption {
+    color: #ffffff;
+}

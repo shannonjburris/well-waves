@@ -26,6 +26,7 @@ const Explore = () => {
         variables: { soundData: id },
       });
       console.log(data);
+      alert("Sound added to Favorites page!")
       // history.push(`/favorites/${data.addUserSound._id}`);
     } catch (err) {
       console.error(err);
@@ -36,10 +37,10 @@ const Explore = () => {
     <Container className="explore-container mt-5">
       <Row>
         <Col>
-          <p>
+          <h4>
             There's a world of sound out there just waiting to be discovered.
-          </p>
-          <p>Click the button below to explore!</p>
+          </h4>
+          <h6>Click the button below to explore!</h6>
           <GenerateSound />
         </Col>
         <Col className="d-flex justify-content-center">
