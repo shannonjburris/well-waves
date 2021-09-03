@@ -55,35 +55,38 @@ function Favorite() {
   }
 
   return (
-    <Container className="mt-5 mb-5">
-      <Row>
-        <div>
-          <h1 className="mb-5">Favorites</h1>
-
-          {savedSounds.map((sound, index) => {
-            return (
-              <Col className="d-flex justify-content-center">
-                <div className="sound-card">
-                  <figure key={sound._id}>
-                    <figcaption>Listen {sound.name}:</figcaption>
-                    <audio controls src={sound.link}>
-                      Your browser does not support the
-                      <code>audio</code> element.
-                    </audio>
-                    <Button
-                      onClick={() => handleClick(sound._id)}
-                      className="delete-button"
-                    >
-                      -
-                    </Button>
-                  </figure>
-                </div>
-              </Col>
-            );
-          })}
-        </div>
-      </Row>
-    </Container>
+    <div>
+      <h1 className="mt-5">Favorites</h1>
+      <Container className="favorites-container">
+        <Row>
+          <Col className="d-flex justify-content-center sounds-wrapper">
+            <div className="square">
+              {savedSounds.map((sound, index) => {
+                return (
+                  <Col className="d-flex justify-content-center">
+                    <div className="sound-card">
+                      <figure key={sound._id}>
+                        <figcaption>Listen {sound.name}:</figcaption>
+                        <audio controls src={sound.link}>
+                          Your browser does not support the
+                          <code>audio</code> element.
+                        </audio>
+                        <Button
+                          onClick={() => handleClick(sound._id)}
+                          className="delete-button"
+                        >
+                          -
+                        </Button>
+                      </figure>
+                    </div>
+                  </Col>
+                );
+              })}
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 }
 
