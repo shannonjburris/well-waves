@@ -1,5 +1,5 @@
-# final-project
-# Frequencies Sound Therapy Application
+
+# Well Waves Therapy Application
 ​
   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ​
