@@ -31,7 +31,7 @@
   ### This project is licensed under MIT
   [MIT](https://opensource.org/licenses/MIT)
 ​
-  ##Deployed app
+  
   ![Screen Shot 2021-09-15 at 12 02 03 PM](https://user-images.githubusercontent.com/85596303/133468897-93e3bce9-8de6-4dee-8556-6ded0cd2541b.png)
 
   ## Links
